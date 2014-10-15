@@ -8,9 +8,18 @@ use Test::More 0.98;
 use Perinci::Sub::GetArgs::WebForm qw(get_args_from_webform);
 
 test_getargs(
+    form => {},
+    args => {},
+);
+test_getargs(
     form => {a=>1, b=>2, "c/a"=>3, "c/b"=>4},
     args => {a=>1, b=>2, c=>{a=>3, b=>4}},
 );
+test_getargs(
+    form => {a=>1, b=>2, "c/c/c/a"=>3},
+    args => {a=>1, b=>2, c=>{c=>{c=>{a=>3}}}},
+);
+
 
 DONE_TESTING:
 done_testing();
