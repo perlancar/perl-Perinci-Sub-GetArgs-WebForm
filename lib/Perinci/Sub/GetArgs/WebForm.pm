@@ -23,7 +23,7 @@ $SPEC{get_args_from_webform} = {
             pos => 0,
             description => <<'_',
 
-Either from `Plack::Request`'s `query_parameters()` or `CGI`'s `params()`.
+Either from `Plack::Request`'s `query_parameters()` or `CGI`'s `Vars()`.
 
 _
         },
