@@ -68,7 +68,7 @@ sub get_args_from_webform {
 }
 
 1;
-#ABSTRACT: Get subroutine arguments from web form
+#ABSTRACT:
 
 =head1 SYNOPSIS
 
